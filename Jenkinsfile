@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('check out git'){
             steps {
-               echo 'puling from gite'
+               git branch: 'main', credentialsId: 'GIT-HUB-ACCESS-TOKEN', url: 'https://github.com/ABBEYOWO/pipeline-docker-k8.git'
             }
         }
         stage ('install node dependencies'){
