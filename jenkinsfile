@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+    stages {
+        stage ('check out git'){
+            steps {
+               echo 'puling from gite'
+            }
+        }
+        stage ('install node dependencies'){
+            steps {
+              echo 'installing'
+            }
+        }
+        stage ('test code'){
+            steps {
+              echo 'tessting'
+            }
+        }
+        
+    }
+    post {
+        success {
+            echo 'build completed successfully'
+        }
+        failure {
+            echo 'this build has failed'
+        }
+    }
+}
