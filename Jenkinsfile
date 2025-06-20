@@ -9,14 +9,14 @@ pipeline {
                git branch: 'main', credentialsId: 'GIT-HUB-ACCESS-TOKEN', url: 'https://github.com/ABBEYOWO/pipeline-docker-k8.git'
             }
         }
-        stage ('testing')  {
+        stage ('install node depenedencies')  {
             steps {
-                echo "testing"
+                sh 'npm install'
             }
         }
-        stage ('edit')  {
+        stage ('test node')  {
             steps {
-                 echo "editng"
+                 sh 'npm test'
             }
         }
         stage ('configure')  {
