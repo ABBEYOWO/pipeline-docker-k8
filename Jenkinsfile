@@ -1,29 +1,25 @@
 pipeline {
     agent any
     stages {
-        stage ('check out git'){
+        stage ('chechout from git hub')  {
             steps {
-               git branch: 'main', credentialsId: 'GIT-HUB-ACCESS-TOKEN', url: 'https://github.com/ABBEYOWO/pipeline-docker-k8.git'
+                git branch: 'main', credentialsId: 'GIT-HUB-ACCESS-TOKEN', url: 'https://github.com/ABBEYOWO/generate-code-pipeline.git' 
             }
         }
-        stage ('install node dependencies'){
+        stage ('chechout from git hub')  {
             steps {
-              echo 'installing'
+
             }
         }
-        stage ('test code'){
+        stage ('chechout from git hub')  {
             steps {
-              echo 'tessting'
+
             }
         }
-        
-    }
-    post {
-        success {
-            echo 'build completed successfully'
-        }
-        failure {
-            echo 'this build has failed'
+        stage ('chechout from git hub')  {
+            steps {
+
+            }
         }
     }
 }
