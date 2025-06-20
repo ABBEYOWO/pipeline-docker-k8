@@ -21,7 +21,7 @@ pipeline {
         }
         stage ('configure')  {
             steps {
-               echo "configure"ggg
+               echo "configure"
             }
         }
     }
