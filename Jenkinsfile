@@ -8,17 +8,17 @@ pipeline {
         }
         stage ('testing')  {
             steps {
-
+                echo "testing"
             }
         }
         stage ('edit')  {
             steps {
-
+                 echo "editng"
             }
         }
         stage ('configure')  {
             steps {
-
+               echo "configure"
             }
         }
     }
